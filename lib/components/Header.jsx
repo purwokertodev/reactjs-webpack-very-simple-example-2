@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import {Jumbotron} from 'react-bootstrap';
 
 class Header extends Component {
   render(){
     return (
       <div>
-        <h2>Consuming REST</h2>
+        <Jumbotron>
+          <h2>React Bootstrap Demo</h2>
+        </Jumbotron>
       </div>
     );
   }
