@@ -1,0 +1,17 @@
+
+ Wuriyanto 2017
+
+ stack:
+
+ - Node JS
+ - React JS
+ - React Bootstrap
+ - Webpack
+
+ how to get start:
+
+ - clone this project : git clone https://github.com/wuriyanto48/reactjs-webpack-very-simple-example-2.git
+ - go to root your project
+ - $ npm install
+ - $ npm start
+ - visit localhost:8080
