@@ -54,7 +54,7 @@ class App extends Component {
             type='text'
             ref='query'
             placeholder='Enter the Movie title'
-            onChange={(e) => {setTimeout(this.handleChange(), 2000);}}
+            onChange={(e) => {this.handleChange();}}
           />
         </Well>
         <Content panelTitle={this.state.title} movies={this.state.movies}/>
