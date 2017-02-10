@@ -2,12 +2,15 @@
 
 let path = require('path');
 
+const DIST_DIR = path.resolve(__dirname, 'dist');
+const SRC_DIR = path.resolve(__dirname, 'lib');
+
 let config = {
-   entry: './lib/main.js',
+   entry: SRC_DIR + '/main.js',
 
    output: {
-      path:path.join('public/javascripts/'),
-      filename: 'index.js'
+      path:DIST_DIR + '/js',
+      filename: 'bundle.js'
    },
 
    devServer: {
