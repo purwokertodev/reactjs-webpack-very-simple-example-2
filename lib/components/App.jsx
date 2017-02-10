@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Header from './Header.jsx';
 import Content from './Content.jsx';
 import {Panel} from 'react-bootstrap';
+import {Well} from 'react-bootstrap';
+import {FormControl} from 'react-bootstrap';
 
 class App extends Component {
 
@@ -9,26 +11,35 @@ class App extends Component {
     super();
     this.state = {
       title: '',
-      userItems: []
+      movies: [],
+      totalMovies: 0
     }
   }
 
   componentWillMount(){
+    this.fetchMovies();
     this.setState({
-      title: 'Fake User Data'
+      title: 'List of movies'
     });
   }
 
   componentDidMount(){
-    this.fetchUsers();
+
   }
 
-  fetchUsers(){
-    fetch('https://jsonplaceholder.typicode.com/users')
+  handleChange(){
+    let q = this.refs.query.value;
+    this.fetchMovies(q);
+  }
+
+  fetchMovies(q = 'twilight'){
+    fetch(`http://www.omdbapi.com/?s=${q}&r=json`, {method: 'GET', mode: 'cors'})
     .then(res => res.json())
-    .then(datas => this.setState({
-      userItems: datas
-    }))
+    .then(data => this.setState({
+        movies: data.Search,
+        totalMovies: data.totalResults
+      })
+    )
     .catch(err => {
       console.log(err);
     });
@@ -38,7 +49,15 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <Content panelTitle={this.state.title} userItems={this.state.userItems}/>
+        <Well>
+          <input
+            type='text'
+            ref='query'
+            placeholder='Enter the Movie title'
+            onChange={(e) => {setTimeout(this.handleChange(), 2000);}}
+          />
+        </Well>
+        <Content panelTitle={this.state.title} movies={this.state.movies}/>
       </div>
     );
   }
