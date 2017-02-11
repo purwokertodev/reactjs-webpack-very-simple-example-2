@@ -1,7 +1,9 @@
 'use strict';
 
 import React, {Component} from 'react';
-import {Jumbotron} from 'react-bootstrap';
+import {Navbar} from 'react-bootstrap';
+import {Nav} from 'react-bootstrap';
+import {NavItem} from 'react-bootstrap';
 
 class Header extends Component {
 
@@ -29,10 +31,20 @@ class Header extends Component {
   render(){
     return (
       <div>
-        <Jumbotron>
-          <h2>React Bootstrap Demo</h2>
-          <h4>{this.state.time.toLocaleTimeString()}</h4>
-        </Jumbotron>
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Brand>Movie News</Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem eventKey={1} href="#">Home</NavItem>
+            <NavItem eventKey={2} href="#">Movie</NavItem>
+            <NavItem eventKey={3} href="#">User</NavItem>
+            <NavItem eventKey={4} href="#">About</NavItem>
+          </Nav>
+          <Nav pullRight>
+            <NavItem>{this.state.time.toLocaleTimeString()}</NavItem>
+          </Nav>
+        </Navbar>
       </div>
     );
   }

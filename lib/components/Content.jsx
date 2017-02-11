@@ -1,20 +1,18 @@
 'use strict';
 
 import React, {Component} from 'react';
+import Header from './Header.jsx';
 import MovieList from './MovieList.jsx';
 import {Panel} from 'react-bootstrap';
 
 class Content extends Component {
 
   render(){
-    let movies = this.props.movies.map((movie, i) => {
-        return <MovieList key={i} movie={movie}/>
-      });
-
       return(
         <div>
-          <Panel header={this.props.panelTitle} bsStyle="primary">
-            {movies}
+          <Header/>
+          <Panel header="Bla" bsStyle="primary">
+            {this.props.children}
           </Panel>
         </div>
       );
