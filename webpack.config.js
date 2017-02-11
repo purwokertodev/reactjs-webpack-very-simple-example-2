@@ -6,10 +6,10 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 const SRC_DIR = path.resolve(__dirname, 'lib');
 
 let config = {
-   entry: SRC_DIR + '/main.js',
+   entry: SRC_DIR + '/app/main.js',
 
    output: {
-      path:DIST_DIR + '/js',
+      path:DIST_DIR + '/app',
       filename: 'bundle.js'
    },
 
@@ -26,6 +26,7 @@ let config = {
          {
             test: /\.jsx?$/,
             exclude: /node_modules/,
+            include: SRC_DIR,
             loader: 'babel',
 
             query: {

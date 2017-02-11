@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build",
-    "build": "webpack -d cp lib/index.html dist/index.html && webpack-dev-server --content-base lib --inline --hot --history-api-fullback",
-    "build:prod": "webpack -d cp lib/index.html dist/index.html"
+    "build": "webpack -d && cp lib/index.html dist/index.html && webpack-dev-server --content-base lib --inline --hot --history-api-fallback",
+    "build:prod": "webpack -d && cp lib/index.html dist/index.html"
   },
   "author": "wuriyanto<wuriyanto48@yahoo.co.id>",
   "license": "ISC",
