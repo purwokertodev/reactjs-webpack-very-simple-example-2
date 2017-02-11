@@ -1,3 +1,5 @@
+'use strict';
+
 import React, {Component} from 'react';
 import {Well} from 'react-bootstrap';
 import {Image} from 'react-bootstrap';
