@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import {Navbar} from 'react-bootstrap';
 import {Nav} from 'react-bootstrap';
 import {NavItem} from 'react-bootstrap';
+import {Link} from 'react-router';
 
 class Header extends Component {
 
@@ -36,10 +37,10 @@ class Header extends Component {
             <Navbar.Brand>Movie News</Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem eventKey={1} href="#">Home</NavItem>
-            <NavItem eventKey={2} href="#">Movie</NavItem>
-            <NavItem eventKey={3} href="#">User</NavItem>
-            <NavItem eventKey={4} href="#">About</NavItem>
+            <NavItem eventKey={1}><Link to={'/home'}>Home</Link></NavItem>
+            <NavItem eventKey={2}><Link to={'/movies'}>Movie</Link></NavItem>
+            <NavItem eventKey={3}><Link to={'/users'}>User</Link></NavItem>
+            <NavItem eventKey={4}><Link to={'/about'}>About</Link></NavItem>
           </Nav>
           <Nav pullRight>
             <NavItem>{this.state.time.toLocaleTimeString()}</NavItem>

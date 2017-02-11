@@ -11,7 +11,7 @@ class Content extends Component {
       return(
         <div>
           <Header/>
-          <Panel header="Bla" bsStyle="primary">
+          <Panel header="React JS" bsStyle="primary">
             {this.props.children}
           </Panel>
         </div>

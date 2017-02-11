@@ -5,6 +5,7 @@ import Home from './Home.jsx';
 import Content from './Content.jsx';
 import MovieList from './MovieList.jsx';
 import UserList from './UserList.jsx';
+import About from './About.jsx';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path={'home'} component={Home}/>
           <Route path={'movies'} component={MovieList}/>
           <Route path={'users'} component={UserList}/>
+          <Route path={'about'} component={About}/>
         </Route>
       </Router>
     );

@@ -2,12 +2,12 @@
 
 import React, {Component} from 'react';
 
-class Home extends Component {
+class About extends Component {
 
   render(){
     return (
       <div>
-        <h1>Home</h1>
+        <h1>About</h1>
         <p>
           React makes it painless to create interactive UIs.
           Design simple views for each state in your application,
@@ -20,4 +20,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default About;
