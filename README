@@ -11,7 +11,7 @@
  how to get start:
 
  - clone this project : git clone https://github.com/wuriyanto48/reactjs-webpack-very-simple-example-2.git
- - go to root your project
+ - go to your project root
  - $ npm install
  - $ npm start
  - visit localhost:8080
